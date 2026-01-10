@@ -101,7 +101,8 @@ const EmailPopup = ({ isOpen: externalIsOpen, onClose: externalOnClose }) => {
 
         <div className="popup-content">
           <div className="popup-logo">
-            <img src={RAZE_LOGO} alt="RAZE" className="popup-logo-img" />
+            <span className="popup-logo-text">RAZE</span>
+            <span className="popup-logo-tagline">Built by Discipline</span>
           </div>
           
           <h2 className="popup-title">Get Early Access</h2>
