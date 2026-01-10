@@ -2207,27 +2207,44 @@ body {
   }
 }
 
-/* RAZE Logo in Giveaway Popup - BIGGER */
+/* RAZE Logo in Giveaway Popup - Text Based */
 .giveaway-logo {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   margin-top: 4px;
-  overflow: visible;
+  gap: 4px;
+}
+
+.giveaway-logo .popup-logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  line-height: 1;
+}
+
+.giveaway-logo .popup-logo-tagline {
+  font-size: 0.65rem;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.9;
+  line-height: 1;
+  font-weight: 600;
 }
 
 .giveaway-logo-img {
   width: 70px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.4));
 }
 
-.giveaway-logo.success-logo .giveaway-logo-img {
-  width: 60px;
-  filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.6));
+.giveaway-logo.success-logo .popup-logo-text {
+  font-size: 1.6rem;
 }
 
 /* Legacy emoji icon (hidden when logo is used) */
