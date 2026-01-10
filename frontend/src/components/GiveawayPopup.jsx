@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL;
 
+// RAZE Logo URL
+const RAZE_LOGO = '/images/popup_logo_cyan.png';
+
 const GiveawayPopup = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
