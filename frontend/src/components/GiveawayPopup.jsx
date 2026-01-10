@@ -208,8 +208,11 @@ const GiveawayPopup = () => {
         ) : (
           <div className="giveaway-content giveaway-success">
             <div className="giveaway-logo success-logo">
-              <span className="popup-logo-text">RAZE</span>
-              <span className="popup-logo-tagline">Built by Discipline</span>
+              <img 
+                src={RAZE_LOGO} 
+                alt="RAZE" 
+                className="giveaway-logo-img"
+              />
             </div>
             <h2 className="giveaway-title">You're In The Giveaway!</h2>
             <p className="giveaway-subtitle">
