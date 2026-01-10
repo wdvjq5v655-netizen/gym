@@ -1924,16 +1924,35 @@ body {
 .popup-logo {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  gap: 4px;
+}
+
+.popup-logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  line-height: 1;
+}
+
+.popup-logo-tagline {
+  font-size: 0.6rem;
+  color: var(--brand-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.9;
+  line-height: 1;
+  font-weight: 600;
 }
 
 .popup-logo-img {
   width: 60px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.4));
 }
 
 /* ========================================
