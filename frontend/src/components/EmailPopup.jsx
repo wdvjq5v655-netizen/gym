@@ -78,8 +78,7 @@ const EmailPopup = ({ isOpen: externalIsOpen, onClose: externalOnClose }) => {
           </button>
           <div className="popup-content popup-success">
             <div className="popup-logo">
-              <span className="popup-logo-text">RAZE</span>
-              <span className="popup-logo-tagline">Built by Discipline</span>
+              <img src={RAZE_LOGO} alt="RAZE" className="popup-logo-img" />
             </div>
             <h2 className="popup-success-title">You Have Early Access!</h2>
             <p className="popup-success-subtitle">
