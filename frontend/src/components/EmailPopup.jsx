@@ -4,9 +4,6 @@ import { popup } from '../utils/storage';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
-// RAZE Logo URL
-const RAZE_LOGO = '/images/popup_logo_cyan.png';
-
 const EmailPopup = ({ isOpen: externalIsOpen, onClose: externalOnClose }) => {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const navigate = useNavigate();
