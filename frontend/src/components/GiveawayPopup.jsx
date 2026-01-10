@@ -147,8 +147,11 @@ const GiveawayPopup = () => {
             </div>
 
             <div className="giveaway-logo">
-              <span className="popup-logo-text">RAZE</span>
-              <span className="popup-logo-tagline">Built by Discipline</span>
+              <img 
+                src={RAZE_LOGO} 
+                alt="RAZE" 
+                className="giveaway-logo-img"
+              />
             </div>
             <h2 className="giveaway-title">
               {t('popup.giveaway.title')}
