@@ -1379,17 +1379,27 @@ body {
   overflow: hidden;
 }
 
+/* Cyan glow layer behind product images */
 .product-image-wrapper::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.05) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  inset: 10%;
+  background: radial-gradient(
+    ellipse 80% 80% at center,
+    rgba(0, 217, 255, 0.25) 0%,
+    rgba(0, 217, 255, 0.15) 30%,
+    rgba(0, 217, 255, 0.05) 60%,
+    transparent 80%
+  );
+  filter: blur(40px);
+  opacity: 0.8;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
 }
 
 .product-card:hover .product-image-wrapper::before {
   opacity: 1;
+  transform: scale(1.1);
 }
 
 .product-image {
