@@ -125,6 +125,25 @@ const AmazonLogo = () => (
   </div>
 );
 
+// Bitcoin Logo
+const BitcoinLogo = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-1.87v-1.88c-1.67-.15-3.14-.89-3.89-2.01l1.72-1.01c.56.82 1.52 1.36 2.67 1.36.93 0 1.67-.36 1.67-1.13 0-.69-.58-1.11-1.93-1.53l-.59-.18c-1.84-.56-3.13-1.35-3.13-3.12 0-1.59 1.18-2.76 2.99-3.08V5.5h1.87v1.94c1.22.17 2.31.72 2.98 1.57l-1.6 1.13c-.45-.56-1.12-.93-1.88-.93-.78 0-1.38.36-1.38 1.03 0 .64.53 1.02 1.69 1.4l.59.18c2.11.66 3.36 1.43 3.36 3.24 0 1.67-1.23 2.89-3.27 3.13z"/>
+  </svg>
+);
+
+// Ethereum Logo
+const EthereumLogo = () => (
+  <svg width="14" height="22" viewBox="0 0 256 417" fill="none">
+    <path d="M127.961 0l-2.795 9.5v275.668l2.795 2.79 127.962-75.638z" fill="#fff" fillOpacity="0.6"/>
+    <path d="M127.962 0L0 212.32l127.962 75.639V154.158z" fill="#fff"/>
+    <path d="M127.961 312.187l-1.575 1.92v98.199l1.575 4.601 128.038-180.32z" fill="#fff" fillOpacity="0.6"/>
+    <path d="M127.962 416.905v-104.72L0 236.585z" fill="#fff"/>
+    <path d="M127.961 287.958l127.96-75.637-127.96-58.162z" fill="#fff" fillOpacity="0.2"/>
+    <path d="M0 212.32l127.96 75.638v-133.8z" fill="#fff" fillOpacity="0.6"/>
+  </svg>
+);
+
 export const PaymentMethods = () => {
   return (
     <div className="footer-payment-methods">
