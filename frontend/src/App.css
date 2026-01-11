@@ -1418,7 +1418,6 @@ body {
 
 .product-card:hover .product-image {
   transform: scale(1.08);
-  filter: drop-shadow(0 0 30px rgba(0, 217, 255, 0.5)) drop-shadow(0 0 60px rgba(0, 217, 255, 0.3)) drop-shadow(0 0 80px rgba(0, 217, 255, 0.15));
 }
 
 .product-placeholder {
