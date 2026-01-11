@@ -399,6 +399,8 @@ const ProductCategories = () => {
         isOpen={productModal.isOpen}
         onClose={() => setProductModal({ isOpen: false, product: null })}
         product={productModal.product}
+        initialSize={productModal.selectedSize}
+        initialGender={productModal.selectedGender}
       />
 
       {/* Waitlist Modal */}
@@ -406,6 +408,8 @@ const ProductCategories = () => {
         isOpen={waitlistModal.isOpen}
         onClose={() => setWaitlistModal({ isOpen: false, product: null })}
         product={waitlistModal.product}
+        initialSize={waitlistModal.selectedSize}
+        initialGender={waitlistModal.selectedGender}
       />
     </section>
   );
