@@ -13149,6 +13149,8 @@ body {
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
+  position: relative;
+  z-index: 15;
 }
 
 .gender-btn {
@@ -13162,6 +13164,8 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
+  z-index: 15;
 }
 
 .gender-btn:hover {
