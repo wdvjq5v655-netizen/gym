@@ -1381,20 +1381,19 @@ body {
   overflow: hidden;
 }
 
-/* Cyan glow layer behind product images */
+/* Subtle ambient glow behind product images */
 .product-image-wrapper::before {
   content: '';
   position: absolute;
-  inset: 5%;
+  inset: 20%;
   background: radial-gradient(
-    ellipse 70% 70% at center,
-    rgba(0, 217, 255, 0.35) 0%,
-    rgba(0, 217, 255, 0.2) 30%,
-    rgba(0, 217, 255, 0.08) 60%,
-    transparent 80%
+    ellipse 50% 50% at center,
+    rgba(0, 217, 255, 0.15) 0%,
+    rgba(0, 217, 255, 0.05) 50%,
+    transparent 70%
   );
-  filter: blur(35px);
-  opacity: 1;
+  filter: blur(30px);
+  opacity: 0.8;
   transition: opacity 0.5s ease, transform 0.5s ease;
   pointer-events: none;
   z-index: 0;
@@ -1402,7 +1401,7 @@ body {
 
 .product-card:hover .product-image-wrapper::before {
   opacity: 1;
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .product-image {
