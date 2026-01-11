@@ -1381,13 +1381,21 @@ body {
   overflow: hidden;
 }
 
+/* Glow layer behind product images - like hero */
 .product-image-wrapper::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.05) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  inset: -20%;
+  background: radial-gradient(
+    ellipse 60% 70% at center,
+    rgba(0, 217, 255, 0.4) 0%,
+    rgba(0, 217, 255, 0.2) 25%,
+    rgba(0, 217, 255, 0.1) 45%,
+    rgba(0, 217, 255, 0.03) 65%,
+    transparent 80%
+  );
+  filter: blur(40px);
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
 }
