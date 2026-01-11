@@ -196,6 +196,16 @@ export const PaymentMethods = () => {
         <PaymentCard bgColor="#FFB3C7" title="Klarna">
           <TextIcon text="Klarna." color="#0A0B09" size="13px" weight={800} />
         </PaymentCard>
+
+        {/* Bitcoin */}
+        <PaymentCard bgColor="#F7931A" title="Bitcoin">
+          <BitcoinLogo />
+        </PaymentCard>
+
+        {/* Ethereum */}
+        <PaymentCard bgColor="#627EEA" title="Ethereum">
+          <EthereumLogo />
+        </PaymentCard>
       </div>
     </div>
   );
