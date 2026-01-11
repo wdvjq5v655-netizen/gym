@@ -1381,13 +1381,24 @@ body {
   overflow: hidden;
 }
 
-/* No background glow - only outline via drop-shadow on image */
+/* Subtle ambient glow behind products */
 .product-image-wrapper::before {
-  display: none;
+  content: '';
+  position: absolute;
+  inset: 15%;
+  background: radial-gradient(
+    ellipse 70% 70% at center,
+    rgba(0, 217, 255, 0.08) 0%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .product-card:hover .product-image-wrapper::before {
-  display: none;
+  opacity: 1;
 }
 
 .product-image {
