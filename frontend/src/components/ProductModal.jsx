@@ -252,6 +252,8 @@ const ProductModal = ({ isOpen, onClose, product, initialSize, initialGender }) 
           variant: product.variant,
           size: selectedSize
         }}
+        initialSize={selectedSize}
+        initialGender={selectedGender}
       />
     </>,
     document.body
