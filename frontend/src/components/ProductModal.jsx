@@ -8,10 +8,10 @@ import WaitlistModal from './WaitlistModal';
 // WAITLIST MODE - All products are on waitlist (sold out)
 const WAITLIST_MODE = true;
 
-const ProductModal = ({ isOpen, onClose, product }) => {
+const ProductModal = ({ isOpen, onClose, product, initialSize, initialGender }) => {
   const [showBack, setShowBack] = useState(false);
-  const [selectedSize, setSelectedSize] = useState('M');
-  const [selectedGender, setSelectedGender] = useState('mens');
+  const [selectedSize, setSelectedSize] = useState(initialSize || 'M');
+  const [selectedGender, setSelectedGender] = useState(initialGender || 'mens');
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -29,12 +29,20 @@ const ProductModal = ({ isOpen, onClose, product }) => {
     return product.sizes || ['XS', 'S', 'M', 'L'];
   };
 
-  // Reset size when gender changes
+  // Initialize with initial values when modal opens
   useEffect(() => {
-    if (isShorts) {
-      setSelectedSize(selectedGender === 'mens' ? 'M' : 'S');
+    if (isOpen && product) {
+      setSelectedSize(initialSize || (isShorts ? (initialGender === 'womens' ? 'S' : 'M') : 'M'));
+      setSelectedGender(initialGender || 'mens');
+      setShowBack(false);
     }
-  }, [selectedGender, isShorts]);
+  }, [isOpen, product, initialSize, initialGender, isShorts]);
+
+  // Reset size when gender changes (only if user manually changes gender)
+  const handleGenderChange = (newGender) => {
+    setSelectedGender(newGender);
+    setSelectedSize(newGender === 'mens' ? 'M' : 'S');
+  };
 
   // Prevent body scroll when modal is open
   useEffect(() => {
