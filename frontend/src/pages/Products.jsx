@@ -317,6 +317,8 @@ const Products = () => {
         isOpen={waitlistModal.isOpen}
         onClose={() => setWaitlistModal({ isOpen: false, product: null })}
         product={waitlistModal.product}
+        initialSize={waitlistModal.selectedSize}
+        initialGender={waitlistModal.selectedGender}
       />
     </div>
   );
