@@ -176,13 +176,13 @@ const ProductModal = ({ isOpen, onClose, product, initialSize, initialGender }) 
                   <div className="modal-gender-toggle">
                     <button
                       className={`modal-gender-btn ${selectedGender === 'mens' ? 'active' : ''}`}
-                      onClick={() => setSelectedGender('mens')}
+                      onClick={() => handleGenderChange('mens')}
                     >
                       Men's
                     </button>
                     <button
                       className={`modal-gender-btn ${selectedGender === 'womens' ? 'active' : ''}`}
-                      onClick={() => setSelectedGender('womens')}
+                      onClick={() => handleGenderChange('womens')}
                     >
                       Women's
                     </button>
