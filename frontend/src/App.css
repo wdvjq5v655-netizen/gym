@@ -6854,6 +6854,8 @@ body {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 15;
 }
 
 .size-btn {
@@ -6871,6 +6873,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  z-index: 15;
 }
 
 .size-btn:hover:not(.disabled) {
