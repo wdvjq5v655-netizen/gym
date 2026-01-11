@@ -1397,6 +1397,7 @@ body {
   opacity: 1;
   transition: opacity 0.5s ease, transform 0.5s ease;
   pointer-events: none;
+  z-index: 0;
 }
 
 .product-card:hover .product-image-wrapper::before {
