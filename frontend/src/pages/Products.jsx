@@ -53,12 +53,16 @@ const Products = () => {
   const handleJoinWaitlist = (product) => {
     const gender = selectedGender[product.id] || 'mens';
     const sizes = product.mensSizes ? (gender === 'mens' ? product.mensSizes : product.womensSizes) : product.sizes;
+    const selectedSize = selectedSizes[product.id] || (gender === 'mens' ? 'M' : 'S');
+    
     setWaitlistModal({ 
       isOpen: true, 
       product: {
         ...product,
         sizes: sizes || ['XS', 'S', 'M', 'L', 'XL']
-      }
+      },
+      selectedSize,
+      selectedGender: gender
     });
   };
 
