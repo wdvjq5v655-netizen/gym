@@ -68,7 +68,14 @@ const ProductCategories = () => {
   };
 
   const handleProductClick = (product) => {
-    setProductModal({ isOpen: true, product });
+    const selectedSize = selectedSizes[product.id] || (product.mensSizes ? 'M' : 'M');
+    const gender = selectedGender[product.id] || 'mens';
+    setProductModal({ 
+      isOpen: true, 
+      product,
+      selectedSize,
+      selectedGender: gender
+    });
   };
 
   const handleWishlistToggle = (e, product) => {
@@ -84,10 +91,19 @@ const ProductCategories = () => {
   };
 
   const handleJoinWaitlist = (product) => {
-    setWaitlistModal({ isOpen: true, product: {
-      ...product,
-      sizes: product.sizes || ['XS', 'S', 'M', 'L', 'XL']
-    }});
+    const gender = selectedGender[product.id] || 'mens';
+    const sizes = product.mensSizes ? (gender === 'mens' ? product.mensSizes : product.womensSizes) : product.sizes;
+    const selectedSize = selectedSizes[product.id] || (gender === 'mens' ? 'M' : 'S');
+    
+    setWaitlistModal({ 
+      isOpen: true, 
+      product: {
+        ...product,
+        sizes: sizes || ['XS', 'S', 'M', 'L', 'XL']
+      },
+      selectedSize,
+      selectedGender: gender
+    });
   };
 
   const handleAddToCart = (product, isShirt = true) => {
