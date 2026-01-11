@@ -155,7 +155,7 @@ export const PaymentMethods = () => {
         </PaymentCard>
 
         {/* Mastercard - circles */}
-        <PaymentCard bgColor="#1A1A1A" title="Mastercard">
+        <PaymentCard bgColor="#2D2D2D" title="Mastercard" hasBorder>
           <MastercardCircles />
         </PaymentCard>
 
