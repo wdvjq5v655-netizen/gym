@@ -8,7 +8,7 @@ import { launchConfetti } from '../utils/confetti';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL;
 
-const WaitlistModal = ({ isOpen, onClose, product }) => {
+const WaitlistModal = ({ isOpen, onClose, product, initialSize, initialGender }) => {
   const [email, setEmail] = useState('');
   const [sizeSelections, setSizeSelections] = useState([{ size: "M (Men's)", quantity: 1 }]);
   const [loading, setLoading] = useState(false);
@@ -39,8 +39,16 @@ const WaitlistModal = ({ isOpen, onClose, product }) => {
       const spots = calculateSpotsRemaining();
       setSpotsRemaining(spots);
       
-      // Reset selections when modal opens
-      const defaultSize = isShorts ? "M (Men's)" : 'M';
+      // Use initial size if provided, otherwise use default
+      let defaultSize;
+      if (isShorts) {
+        const gender = initialGender || 'mens';
+        const size = initialSize || (gender === 'mens' ? 'M' : 'S');
+        defaultSize = `${size} (${gender === 'mens' ? "Men's" : "Women's"})`;
+      } else {
+        defaultSize = initialSize || 'M';
+      }
+      
       setSizeSelections([{ size: defaultSize, quantity: 1 }]);
       setSuccess(false);
       setError('');
@@ -51,7 +59,7 @@ const WaitlistModal = ({ isOpen, onClose, product }) => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, isShorts]);
+  }, [isOpen, isShorts, initialSize, initialGender]);
 
   const addSizeSelection = () => {
     // Find a size that hasn't been selected yet, or default to first available
